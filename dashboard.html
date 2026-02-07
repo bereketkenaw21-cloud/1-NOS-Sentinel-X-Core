@@ -3,21 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>1-NOS Sentinel-X | Dashboard</title>
+    <title>1-NOS Sentinel-X | Global Protocol</title>
     <style>
         body { background-color: #0a0e14; color: white; font-family: 'Segoe UI', sans-serif; margin: 0; padding: 20px; }
-        .header { display: flex; justify-content: space-between; align-items: center; border-bottom: 2px solid #333; padding-bottom: 10px; margin-bottom: 30px; }
+        .header { display: flex; justify-content: space-between; align-items: center; border-bottom: 2px solid #333; padding-bottom: 10px; margin-bottom: 20px; }
         .online-tag { background: #00ff00; color: black; padding: 2px 10px; border-radius: 10px; font-size: 12px; font-weight: bold; }
-        .card { background: #161b22; border-radius: 15px; padding: 25px; margin-bottom: 20px; border-left: 5px solid #00f2ff; }
+        .card { background: #161b22; border-radius: 15px; padding: 20px; margin-bottom: 15px; border-left: 5px solid #00f2ff; }
         .card-red { border-left-color: #ff4d4d; }
-        .score { font-size: 48px; font-weight: bold; color: #00f2ff; }
-        .loops { font-size: 48px; font-weight: bold; color: #ff4d4d; }
-        .btn-container { display: flex; gap: 15px; }
-        button { flex: 1; padding: 15px; border: none; border-radius: 10px; font-weight: bold; cursor: pointer; transition: 0.3s; width: 100%; }
+        .protocol-card { background: #0d1117; border: 1px solid #30363d; border-radius: 10px; padding: 15px; margin-bottom: 20px; }
+        .protocol-item { display: flex; justify-content: space-between; font-size: 13px; margin-bottom: 8px; color: #8b949e; }
+        .check { color: #238636; font-weight: bold; }
+        .score { font-size: 40px; font-weight: bold; color: #00f2ff; }
+        .loops { font-size: 40px; font-weight: bold; color: #ff4d4d; }
+        .btn-container { display: flex; gap: 10px; }
+        button { flex: 1; padding: 15px; border: none; border-radius: 10px; font-weight: bold; cursor: pointer; width: 100%; }
         .btn-primary { background: #00c6ff; color: white; }
         .btn-secondary { background: transparent; color: #00f2ff; border: 2px solid #00f2ff; }
         a { text-decoration: none; flex: 1; }
-        .terminal { background: black; padding: 15px; border-radius: 10px; font-family: monospace; color: #00ff00; font-size: 13px; margin-top: 20px; }
     </style>
 </head>
 <body>
@@ -25,37 +27,33 @@
 <div class="header">
     <div style="display: flex; align-items: center; gap: 10px;">
         <span style="font-size: 24px;">🛡️</span>
-        <h2 style="margin: 0;">1-NOS Sentinel-X</h2>
+        <h2 style="margin: 0; font-size: 20px;">1-NOS Sentinel-X</h2>
     </div>
-    <span class="online-tag">ONLINE</span>
+    <span class="online-tag">GLOBAL ENFORCEMENT</span>
+</div>
+
+<div class="protocol-card">
+    <div style="font-size: 12px; color: #00f2ff; margin-bottom: 10px; font-weight: bold;">SYSTEM COMPLIANCE PROTOCOLS</div>
+    <div class="protocol-item"><span>FATF Anti-Money Laundering</span> <span class="check">✓ ACTIVE</span></div>
+    <div class="protocol-item"><span>AES-256 Data Encryption</span> <span class="check">✓ SECURE</span></div>
+    <div class="protocol-item"><span>ISO/IEC 27001 Standard</span> <span class="check">✓ VERIFIED</span></div>
 </div>
 
 <div class="card">
-    <div style="color: #888;">የደህንነት ውጤት (Security Score)</div>
+    <div style="color: #888; font-size: 14px;">የደህንነት ውጤት (Security Score)</div>
     <div class="score">98.4%</div>
-    <div style="color: #00ff00; font-size: 12px;">AI Neural Core: Active</div>
+    <div style="color: #00ff00; font-size: 11px;">Neural Core Stability: Optimal</div>
 </div>
 
 <div class="card card-red">
-    <div style="color: #888;">የተኙ ህገ-ወጥ ዝውውሮች</div>
+    <div style="color: #888; font-size: 14px;">የተገኙ ህገ-ወጥ ዝውውሮች</div>
     <div class="loops">42 Loops</div>
-    <div style="color: #ff4d4d; font-size: 12px;">ቴሌብር ያልደረሰባቸው ከፍተኛ ችግሮች</div>
+    <div style="color: #ff4d4d; font-size: 11px;">High-Risk Anomalies Detected</div>
 </div>
 
 <div class="btn-container">
-    <a href="map.html">
-        <button class="btn-primary">NEURAL SCAN</button>
-    </a>
-    
-    <a href="report.html">
-        <button class="btn-secondary">REPORT</button>
-    </a>
-</div>
-
-<div class="terminal">
-    <div>> 1-NOS System initialized...</div>
-    <div>> Satellite Mapping Ready...</div>
-    <div>> Waiting for Neural Scan command...</div>
+    <a href="map.html"><button class="btn-primary">GEOSPATIAL SCAN</button></a>
+    <a href="report.html"><button class="btn-secondary">AUDIT REPORT</button></a>
 </div>
 
 </body>
