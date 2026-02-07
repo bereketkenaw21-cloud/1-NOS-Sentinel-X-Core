@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="am">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sentinel-X | Illicit Loops Report</title>
+    <style>
+        body { background-color: #0a0e14; color: white; font-family: sans-serif; padding: 20px; }
+        .header { display: flex; justify-content: space-between; align-items: center; border-bottom: 2px solid #00f2ff; padding-bottom: 10px; }
+        .status-high { color: #ff4d4d; font-weight: bold; }
+        table { width: 100%; border-collapse: collapse; margin-top: 20px; background: rgba(16, 22, 32, 0.8); }
+        th, td { padding: 15px; text-align: left; border-bottom: 1px solid #333; }
+        th { color: #00f2ff; text-transform: uppercase; font-size: 12px; }
+        .back-btn { background: #00f2ff; color: #0a0e14; padding: 10px 20px; text-decoration: none; border-radius: 5px; font-weight: bold; }
+    </style>
+</head>
+<body>
+
+<div class="header">
+    <h2>Illicit Loops Report (42 Detected)</h2>
+    <a href="dashboard.html" class="back-btn">Back to Dashboard</a>
+</div>
+
+<table>
+    <thead>
+        <tr>
+            <th>Transaction ID</th>
+            <th>Location</th>
+            <th>Amount (ETB)</th>
+            <th>Risk Level</th>
+            <th>Status</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>#TRX-99201</td>
+            <td>Addis Ababa (Mercato)</td>
+            <td>1,200,000</td>
+            <td class="status-high">CRITICAL</td>
+            <td>Investigation Pending</td>
+        </tr>
+        <tr>
+            <td>#TRX-99405</td>
+            <td>Togochale Border</td>
+            <td>850,000</td>
+            <td class="status-high">HIGH</td>
+            <td>Flagged by AI</td>
+        </tr>
+        <tr>
+            <td>#TRX-99812</td>
+            <td>Moyale Transit</td>
+            <td>2,100,000</td>
+            <td class="status-high">CRITICAL</td>
+            <td>Neural Core Alert</td>
+        </tr>
+        </tbody>
+</table>
+
+</body>
+</html>
