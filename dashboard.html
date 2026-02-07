@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>1-NOS Sentinel-X | Global Protocol</title>
+    <title>1-NOS Sentinel-X | Audio Protocol</title>
     <style>
         body { background-color: #0a0e14; color: white; font-family: 'Segoe UI', sans-serif; margin: 0; padding: 20px; }
         .header { display: flex; justify-content: space-between; align-items: center; border-bottom: 2px solid #333; padding-bottom: 10px; margin-bottom: 20px; }
@@ -52,9 +52,20 @@
 </div>
 
 <div class="btn-container">
-    <a href="map.html"><button class="btn-primary">GEOSPATIAL SCAN</button></a>
+    <a href="map.html" onclick="playAlert()">
+        <button class="btn-primary">GEOSPATIAL SCAN</button>
+    </a>
     <a href="report.html"><button class="btn-secondary">AUDIT REPORT</button></a>
 </div>
+
+<script>
+    function playAlert() {
+        // የሳይበር ማስጠንቀቂያ ድምፅ (High-tech beep)
+        var audio = new Audio('https://www.soundjay.com/buttons/sounds/button-29.mp3');
+        audio.play();
+        alert("CRITICAL SCAN INITIATED: Global Protocols Engaged!");
+    }
+</script>
 
 </body>
 </html>
