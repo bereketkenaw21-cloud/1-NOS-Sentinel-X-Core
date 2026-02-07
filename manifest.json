@@ -1,0 +1,16 @@
+{
+  "name": "1-NOS Sentinel-X",
+  "short_name": "1-NOS",
+  "description": "National Economic Guard - Offline Security System",
+  "start_url": "nos_app_interface.html",
+  "display": "standalone",
+  "background_color": "#0a192f",
+  "theme_color": "#64ffda",
+  "icons": [
+    {
+      "src": "https://img.icons8.com/fluency/144/shield.png",
+      "sizes": "144x144",
+      "type": "image/png"
+    }
+  ]
+}
