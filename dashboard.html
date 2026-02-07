@@ -59,3 +59,8 @@
         }, 2000);
     });
 </script>
+        document.querySelector('.report-btn').addEventListener('click', function() {
+            const terminal = document.querySelector('.terminal');
+            terminal.innerHTML += "<p style='color: #00f2ff;'>> Generating Neural Audit Report...</p>";
+            alert("Investigation Report: Target User_A, B, C identified in circular flow. 42 Loops detected.");
+        });
