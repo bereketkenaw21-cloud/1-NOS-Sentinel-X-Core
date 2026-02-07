@@ -47,3 +47,15 @@
     </div>
 </body>
 </html>
+<script>
+    document.querySelector('.scan-btn').addEventListener('click', function() {
+        const terminal = document.querySelector('.terminal');
+        terminal.innerHTML += "<p>> Scanning financial mesh for loops...</p>";
+        
+        // ከ Python የሚመጣውን ውጤት እዚህ ጋር እናሳያለን
+        setTimeout(() => {
+            terminal.innerHTML += "<p style='color: #ff4d4d;'>> ALERT: 42 Illicit Loops detected in Neural Core!</p>";
+            document.querySelector('.loops').innerText = "42 Loops";
+        }, 2000);
+    });
+</script>
