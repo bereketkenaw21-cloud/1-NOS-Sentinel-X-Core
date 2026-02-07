@@ -89,3 +89,10 @@
 
 </body>
 </html>
+<script>
+    document.getElementById('loginForm').onsubmit = function(e) {
+        e.preventDefault();
+        // ወደ ዋናው Neural Scan ገጽ (Dashboard) ይወስደዋል
+        window.location.href = 'dashboard.html'; 
+    };
+</script>
