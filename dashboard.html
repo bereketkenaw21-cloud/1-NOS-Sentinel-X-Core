@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="am">
 <head>
@@ -6,65 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>1-NOS Sentinel-X | Dashboard</title>
     <style>
-        body {
-            background-color: #0a0e14;
-            color: white;
-            font-family: 'Segoe UI', sans-serif;
-            margin: 0;
-            padding: 20px;
-        }
-        .header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            border-bottom: 2px solid #333;
-            padding-bottom: 10px;
-            margin-bottom: 30px;
-        }
-        .online-tag {
-            background: #00ff00;
-            color: black;
-            padding: 2px 10px;
-            border-radius: 10px;
-            font-size: 12px;
-            font-weight: bold;
-        }
-        .card {
-            background: #161b22;
-            border-radius: 15px;
-            padding: 25px;
-            margin-bottom: 20px;
-            border-left: 5px solid #00f2ff;
-        }
+        body { background-color: #0a0e14; color: white; font-family: 'Segoe UI', sans-serif; margin: 0; padding: 20px; }
+        .header { display: flex; justify-content: space-between; align-items: center; border-bottom: 2px solid #333; padding-bottom: 10px; margin-bottom: 30px; }
+        .online-tag { background: #00ff00; color: black; padding: 2px 10px; border-radius: 10px; font-size: 12px; font-weight: bold; }
+        .card { background: #161b22; border-radius: 15px; padding: 25px; margin-bottom: 20px; border-left: 5px solid #00f2ff; }
         .card-red { border-left-color: #ff4d4d; }
         .score { font-size: 48px; font-weight: bold; color: #00f2ff; }
         .loops { font-size: 48px; font-weight: bold; color: #ff4d4d; }
         .btn-container { display: flex; gap: 15px; }
-        button {
-            flex: 1;
-            padding: 15px;
-            border: none;
-            border-radius: 10px;
-            font-weight: bold;
-            cursor: pointer;
-            transition: 0.3s;
-        }
+        button { flex: 1; padding: 15px; border: none; border-radius: 10px; font-weight: bold; cursor: pointer; transition: 0.3s; width: 100%; }
         .btn-primary { background: #00c6ff; color: white; }
-        .btn-secondary { 
-            background: transparent; 
-            color: #00f2ff; 
-            border: 2px solid #00f2ff; 
-        }
-        .terminal {
-            background: black;
-            padding: 15px;
-            border-radius: 10px;
-            font-family: monospace;
-            color: #00ff00;
-            font-size: 13px;
-            margin-top: 20px;
-        }
+        .btn-secondary { background: transparent; color: #00f2ff; border: 2px solid #00f2ff; }
         a { text-decoration: none; flex: 1; }
+        .terminal { background: black; padding: 15px; border-radius: 10px; font-family: monospace; color: #00ff00; font-size: 13px; margin-top: 20px; }
     </style>
 </head>
 <body>
@@ -84,22 +37,25 @@
 </div>
 
 <div class="card card-red">
-    <div style="color: #888;">የተገኙ ህገ-ወጥ ዝውውሮች</div>
+    <div style="color: #888;">የተኙ ህገ-ወጥ ዝውውሮች</div>
     <div class="loops">42 Loops</div>
     <div style="color: #ff4d4d; font-size: 12px;">ቴሌብር ያልደረሰባቸው ከፍተኛ ችግሮች</div>
 </div>
 
 <div class="btn-container">
-    <button class="btn-primary" onclick="alert('Neural Core Scanning Started...')">NEURAL SCAN</button>
+    <a href="map.html">
+        <button class="btn-primary">NEURAL SCAN</button>
+    </a>
+    
     <a href="report.html">
-        <button class="btn-secondary" style="width: 100%;">REPORT</button>
+        <button class="btn-secondary">REPORT</button>
     </a>
 </div>
 
 <div class="terminal">
     <div>> 1-NOS System initialized...</div>
-    <div>> Offline Data Engine Ready...</div>
-    <div>> Waiting for input...</div>
+    <div>> Satellite Mapping Ready...</div>
+    <div>> Waiting for Neural Scan command...</div>
 </div>
 
 </body>
