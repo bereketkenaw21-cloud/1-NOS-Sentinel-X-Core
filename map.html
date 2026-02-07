@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sentinel-X | Live Threat Map</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <style>
+        body { margin: 0; background: #0a0e14; color: white; font-family: sans-serif; }
+        #map { height: 70vh; width: 100%; border-bottom: 2px solid #00f2ff; }
+        .info-panel { padding: 20px; text-align: center; }
+        .back-btn { background: #00f2ff; color: #0a0e14; padding: 10px 20px; text-decoration: none; border-radius: 5px; font-weight: bold; }
+        .pulse { color: #ff4d4d; animation: blink 1s infinite; }
+        @keyframes blink { 50% { opacity: 0.5; } }
+    </style>
+</head>
+<body>
+
+<div id="map"></div>
+
+<div class="info-panel">
+    <h3><span class="pulse">●</span> Sentinel-X Live Geospatial Tracking</h3>
+    <p>በካርታው ላይ የታዩት ቀይ ነጥቦች ስጋት ያለባቸውን ቦታዎች ያሳያሉ</p>
+    <a href="dashboard.html" class="back-btn">ወደ ዳሽቦርድ ተመለስ</a>
+</div>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script>
+    // የኢትዮጵያ መካከለኛ ነጥብ (Addis Ababa coordinates)
+    var map = L.map('map').setView([9.145, 40.4896], 6);
+
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '© OpenStreetMap'
+    }).addTo(map);
+
+    // አንዳንድ ስጋት ያለባቸው ቦታዎች ምሳሌዎች
+    var hotspots = [
+        {name: "Addis Ababa - High Risk", coords: [9.03, 38.74]},
+        {name: "Togochale Border - Flagged", coords: [9.35, 43.34]},
+        {name: "Moyale - Critical Loop", coords: [3.53, 39.05]}
+    ];
+
+    hotspots.forEach(function(spot) {
+        L.circle(spot.coords, {
+            color: 'red',
+            fillColor: '#f03',
+            fillOpacity: 0.5,
+            radius: 50000
+        }).addTo(map).bindPopup(spot.name);
+    });
+</script>
+
+</body>
+</html>
