@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="am">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1-NOS Sentinel-X | Bank Staff Login</title>
+    <style>
+        body {
+            background-color: #0a0e14;
+            color: #ffffff;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            overflow: hidden;
+        }
+        .login-container {
+            background: rgba(16, 22, 32, 0.9);
+            padding: 40px;
+            border-radius: 15px;
+            border: 2px solid #00f2ff;
+            box-shadow: 0 0 20px rgba(0, 242, 255, 0.3);
+            text-align: center;
+            width: 400px;
+        }
+        .logo {
+            width: 120px;
+            margin-bottom: 20px;
+        }
+        h2 {
+            color: #00f2ff;
+            margin-bottom: 10px;
+            letter-spacing: 2px;
+        }
+        p {
+            color: #8899a6;
+            margin-bottom: 30px;
+        }
+        input {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            background: #1c2732;
+            border: 1px solid #38444d;
+            border-radius: 5px;
+            color: white;
+            box-sizing: border-box;
+        }
+        button {
+            width: 100%;
+            padding: 15px;
+            background: linear-gradient(90deg, #00d2ff 0%, #3a7bd5 100%);
+            border: none;
+            border-radius: 5px;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+            margin-top: 20px;
+            transition: 0.3s;
+        }
+        button:hover {
+            box-shadow: 0 0 15px #00f2ff;
+        }
+    </style>
+</head>
+<body>
+
+<div class="login-container">
+    <img src="https://via.placeholder.com/120x120.png?text=1-NOS+LOGO" alt="1-NOS Logo" class="logo">
+    <h2>Bank Staff Login</h2>
+    <p>የባንክ ሰራተኛ መለያዎን ያስገቡ</p>
+    
+    <form id="loginForm">
+        <input type="text" placeholder="Employee ID (ለምሳሌ: CBE-9901)" required>
+        <input type="password" placeholder="Security PIN" required>
+        <button type="submit">LOGIN TO SENTINEL-X</button>
+    </form>
+</div>
+
+<script>
+    document.getElementById('loginForm').onsubmit = function(e) {
+        e.preventDefault();
+        // ወደ ዋናው Neural Scan ገጽ ይወስደዋል
+        window.location.href = 'nos_app_interface.html';
+    };
+</script>
+
+</body>
+</html>
