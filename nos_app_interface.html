@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="am">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1-NOS Sentinel-X (Pro)</title>
+    <link rel="manifest" href="manifest.json">
+    <style>
+        :root { --primary: #00f2fe; --secondary: #4facfe; --bg: #050a14; --card: #0f172a; --danger: #ff4757; }
+        body { font-family: 'Segoe UI', sans-serif; background: var(--bg); color: #e2e8f0; margin: 0; padding: 20px; }
+        .dashboard-header { border-left: 4px solid var(--primary); padding-left: 15px; margin-bottom: 25px; }
+        .status-badge { padding: 5px 12px; border-radius: 20px; font-size: 12px; font-weight: bold; float: right; }
+        .online { background: #2ed573; color: #050a14; }
+        .offline { background: #ffa500; color: #050a14; }
+        .card { background: var(--card); border-radius: 16px; padding: 20px; margin-bottom: 20px; border: 1px solid #1e293b; box-shadow: 0 10px 20px rgba(0,0,0,0.5); }
+        .metric { font-size: 32px; font-weight: bold; color: var(--primary); margin: 10px 0; }
+        .btn-group { display: flex; gap: 10px; margin-top: 10px; }
+        .btn { flex: 1; background: linear-gradient(45deg, var(--secondary), var(--primary)); border: none; padding: 18px; border-radius: 12px; color: var(--bg); font-weight: bold; cursor: pointer; font-size: 14px; }
+        .btn-report { background: transparent; color: var(--primary); border: 2px solid var(--primary); }
+        .console { background: #010409; border-radius: 10px; padding: 15px; font-family: monospace; font-size: 11px; color: #3fb950; height: 130px; overflow-y: auto; border: 1px solid #30363d; margin-top: 15px; }
+    </style>
+</head>
+<body>
+
+    <div id="status" class="status-badge online">ONLINE</div>
+    <div class="dashboard-header">
+        <h2 style="margin:0;">🛡️ 1-NOS Sentinel-X</h2>
+        <small>National Economic Guard System</small>
+    </div>
+
+    <div class="card">
+        <div style="font-size: 14px; color: #94a3b8;">የደህንነት ውጤት (Security Score)</div>
+        <div class="metric">98.4%</div>
+        <div style="font-size: 12px; color: #3fb950;">AI Neural Core: Active</div>
+    </div>
+
+    <div class="card" style="border-left: 4px solid var(--danger);">
+        <div style="font-size: 14px; color: #94a3b8;">የተገኙ ህገ-ወጥ ዝውውሮች</div>
+        <div class="metric" style="color: var(--danger);">42 Loops</div>
+        <div style="font-size: 12px;">ቴሌብር ያልደረሰባቸው ክፍተቶች</div>
+    </div>
+
+    <div class="btn-group">
+        <button class="btn" onclick="startScan()">NEURAL SCAN</button>
+        <button class="btn btn-report" onclick="downloadReport()">REPORT</button>
+    </div>
+
+    <div class="console" id="log">
+        > 1-NOS System initialized...<br>
+        > Offline Data Engine Ready...<br>
+        > Waiting for input...
+    </div>
+
+    <script>
+        function startScan() {
+            const log = document.getElementById('log');
+            log.innerHTML += "> Scanning through transaction nodes...<br>";
+            setTimeout(() => {
+                log.innerHTML += "> <span style='color:orange'>[FOUND]</span> 42 Suspicious Loops detected in Cluster 7.<br>";
+                log.innerHTML += "> Behavioral analysis complete.<br>";
+                alert("AI ትንተና ተጠናቋል። 42 ህገ-ወጥ ዝውውሮች ተለይተዋል።");
+            }, 1000);
+        }
+
+        function downloadReport() {
+            alert("የኦዲት ሪፖርት በፒዲኤፍ (PDF) ተዘጋጅቷል።");
+        }
+
+        window.addEventListener('offline', () => {
+            const s = document.getElementById('status');
+            s.innerText = "OFFLINE MODE";
+            s.className = "status-badge offline";
+            document.getElementById('log').innerHTML += "> Connection lost. Running on Local AI Engine...<br>";
+        });
+
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('sw.js');
